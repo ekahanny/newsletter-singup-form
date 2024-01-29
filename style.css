@@ -20,43 +20,41 @@ body {
     max-width: 53rem;
     gap: 1.25rem;
     padding: 1.5rem;
-    border-radius: 0.9rem;
+    border-radius: 2rem;
 }
 
 .card-content{
-    padding: 30px;
+    padding: 60px 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 
 .card-title{
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 56px;
 }
 
 .card-img{
     width: 50%;
 }
 
-.card-desc{
-    margin-bottom: 15px;
-}
 
 .desc-check {
-    margin: 15px 0;
     line-height: 2.5;
-    display: inline;
+    /* font-size: 17px; */
 }
 
 .desc-check img {
     margin: 0px 5px; 
+    width: 17px;
 }
 
-form{
-    margin-top: 25px;
-}
+
 
 #email{
-    width: 85%;
+    width: 20rem;
     border-radius: 8px;
     border: 1px solid #999;
     min-height: 2.5rem;
@@ -69,7 +67,17 @@ form{
     width: 100%;
     background-color: hsl(234, 29%, 20%);
     color: white;
-    margin-top: 15px;
+    margin-top: 20px;
     min-height: 2.5rem;
     border-radius: 5px;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px;
+
+    
+}
+
+label {
+    font-size: small;
+    font-weight: 800;
 }
