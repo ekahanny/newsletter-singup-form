@@ -43,11 +43,13 @@ body {
 
 .desc-check {
     line-height: 2.5;
-    /* font-size: 17px; */
+    font-size: 16px;
 }
 
+
+
 .desc-check img {
-    margin: 0px 5px; 
+    margin: 0px 15px; 
     width: 17px;
 }
 
@@ -76,6 +78,11 @@ body {
 
     
 }
+
+#btn-click:hover{
+    background-image: linear-gradient(to right, #ff6257 60%, #EF8F43);
+}
+
 
 label {
     font-size: small;
