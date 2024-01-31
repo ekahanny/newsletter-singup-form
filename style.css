@@ -90,3 +90,8 @@ label {
     font-size: small;
     font-weight: 800;
 }
+
+.msg-error{
+    align-items: end;
+    /* display: none; */
+}
