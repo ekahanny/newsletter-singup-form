@@ -8,15 +8,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
     <title>Success!</title>
 
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: hsl(235, 18%, 26%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-card{
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            display: flex;
+            max-width: 18.5rem;
+            min-height: 19rem;
+            padding: 3rem;
+            border-radius: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .success-icon{
+            width: 40px;
+
+        }
+
+        .card-title{
+            font-size: 40px;
+            color: hsl(234, 29%, 20%);
+            margin-top: 18px;
+        }
+
+        .card-desc{
+            font-size: 13px;
+            line-height: 1.5;
+            color: hsl(235, 18%, 26%);
+            margin-top: 10px;
+        }
+
+        button{
+            background-color: hsl(234, 29%, 20%);
+            color: white;
+            width: 19rem;
+            height: 3rem;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 23px;
+        }
+
+
+
+
+    </style>
+
 </head>
 <body>
     <div class="main-card">
         <img src="assets/images/icon-list.svg" class="success-icon">
         <h1 class="card-title">Thanks for subscribing!</h1>
         <p class="card-desc">
-            A confirmation email has been sent to ash@loremcompany.com. 
+            A confirmation email has been sent to <b>ash@loremcompany.com. </b>
             Please open it and click the button inside to confirm your subscription.</p>
-        <button>Dismiss message</button>
+        <a href="index.html"><button>Dismiss message</button></a>
     </div>
 </body>
 </html>

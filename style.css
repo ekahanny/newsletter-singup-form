@@ -81,6 +81,8 @@ body {
 
 #btn-click:hover{
     background-image: linear-gradient(to right, #ff6257 60%, #EF8F43);
+    border: none;
+    filter:drop-shadow(1px 1px 10px #ff6257);
 }
 
 
