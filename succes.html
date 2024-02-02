@@ -63,6 +63,12 @@
             cursor: pointer;
         }
 
+        button:hover{
+            background-image: linear-gradient(to right, #ff6257 60%, #EF8F43);
+            border: none;
+            filter:drop-shadow(1px 1px 10px #ff6257);
+        }
+
 
 
 
@@ -74,10 +80,24 @@
         <img src="assets/images/icon-list.svg" class="success-icon">
         <h1 class="card-title">Thanks for subscribing!</h1>
         <p class="card-desc">
-            A confirmation email has been sent to <b>ash@loremcompany.com. </b>
+            A confirmation email has been sent to <b id="user-email">ash@loremcompany.com.</b>
             Please open it and click the button inside to confirm your subscription.</p>
         <a href="index.html"><button>Dismiss message</button></a>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userEmail = localStorage.getItem('userEmail');
+
+            if (userEmail) {
+                const emailElement = document.getElementById('user-email');
+                emailElement.innerText = userEmail;
+            } else {
+                console.error('User email not found in localStorage.');
+            }
+        });
+    </script>
+
 </body>
 </html>
 

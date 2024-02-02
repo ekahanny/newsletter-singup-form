@@ -92,6 +92,16 @@ label {
 }
 
 .msg-error{
-    align-items: end;
-    /* display: none; */
+    display: none;
+    font-size: small;
+    color: red;
+
 }
+
+.input-error-wrapper{
+    display: flex;
+    gap: 85px;
+}
+
+
+
