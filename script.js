@@ -1,28 +1,34 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const emailInput = document.getElementById('email');
-    const errorMsg = document.querySelector('.msg-error');
+window.addEventListener('DOMContentLoaded', function() {
+    const email = document.getElementById('email');
     const submitBtn = document.getElementById('btn-click');
+    const errorMessage = document.querySelector('.msg-error');
+    const cardImg = document.getElementById('card-img');
 
-    submitBtn.addEventListener('click', function (event) {
-      event.preventDefault();
+    if (window.innerWidth <= 375) {
+        cardImg.src = '/assets/images/illustration-sign-up-mobile.svg';
+    } 
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault();
 
-      if (emailRegex.test(emailInput.value)) {
-        localStorage.setItem('userEmail', emailInput.value);
-        window.location.href = 'succes.html';
-      } else {
-        errorMsg.style.display = 'block';
-        emailInput.style.borderColor = 'red';
-        emailInput.style.backgroundColor = '#e7564b41';
-        emailInput.style.color = '#ff6257';
-      }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(emailRegex.test(email.value)){
+            localStorage.setItem('userEmail', email.value);
+            window.location.href = 'succes.html';
+
+        }else{
+            errorMessage.style.display = 'block';
+            email.style.borderColor = 'red';
+            email.style.backgroundColor = '#e7564b41';
+            email.style.color = '#ff6257';
+        }
     });
 
-    emailInput.addEventListener('focus', function () {
-      errorMsg.style.display = 'none';
-      emailInput.style.borderColor = '#999';
-      emailInput.style.backgroundColor = 'white';
-      emailInput.style.color = 'black';
+    email.addEventListener('focus', function() {
+        errorMessage.style.display = 'none';
+        email.style.borderColor = '#999';
+        email.style.backgroundColor = 'white';
+        email.style.color = 'black';
     });
-  });
+});
